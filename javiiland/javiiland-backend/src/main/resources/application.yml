@@ -1,0 +1,21 @@
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    listener:
+      simple:
+        acknowledge-mode: manual
+        prefetch: 1
+        default-requeue-rejected: false
+        retry:
+          enabled: false
+  mail:
+    host: localhost
+    port: 1025
+
+app:
+  url: http://localhost:5173
+  mail-from: no-reply@javiiland.local
+  simular-fallos: false
